@@ -1,8 +1,9 @@
 using System;
 using Code.Extensions;
+using Code.Gameplay.Logic;
 using UnityEngine;
 
-namespace Code.Gameplay
+namespace Code.Gameplay.View
 {
     internal sealed class MoveView:MonoBehaviour
     {

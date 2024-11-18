@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Code.Gameplay
+namespace Code.Gameplay.Logic
 {
     internal class MoverX : MonoBehaviour
     {

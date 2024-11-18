@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace Code.Gameplay
+namespace Code.Gameplay.Logic
 {
     internal sealed class EnemiesSpawner : MonoBehaviour
     {
