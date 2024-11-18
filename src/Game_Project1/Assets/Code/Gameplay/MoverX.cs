@@ -10,6 +10,7 @@ namespace Code.Gameplay
         private float _speed;
 
         public float Speed => _rigidbody.velocity.x;
+        public bool IsMover => _rigidbody.velocity.x !=0;
 
         public void Move(float input)
         {
