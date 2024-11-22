@@ -412,8 +412,8 @@ GameObject:
   m_Component:
   - component: {fileID: 841778393}
   - component: {fileID: 841778394}
-  m_Layer: 0
-  m_Name: EnemiesSpawner
+  m_Layer: 7
+  m_Name: CollectableSpawner
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -816,6 +816,7 @@ GameObject:
   - component: {fileID: 1795669303}
   - component: {fileID: 1795669304}
   - component: {fileID: 1795669305}
+  - component: {fileID: 1795669306}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -1027,6 +1028,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 1795669304}
   _moverX: {fileID: 1795669302}
+--- !u!114 &1795669306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795669296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f14460ca044de085c94faf29ab9938, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1865717977
 PrefabInstance:
   m_ObjectHideFlags: 0
