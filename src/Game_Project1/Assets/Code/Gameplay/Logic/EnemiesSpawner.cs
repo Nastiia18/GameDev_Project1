@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace Code.Gameplay.Logic
@@ -10,23 +11,22 @@ namespace Code.Gameplay.Logic
         [SerializeField]
         private GameObject _enemy;
 
-        private float _timer;
+        
         
         private void Start()
         {
-            _timer = _spawnInterval;
+            StartCoroutine(SpawnEnemyCoroutine());
         }
 
-        private void Update()
-        {
-            _timer -= Time.deltaTime;
+       
 
-            if (_timer <= 0)
+        private IEnumerator SpawnEnemyCoroutine()
+        {
+            while (true)
             {
+                yield return new WaitForSeconds(_spawnInterval);
                 SpawnEnemy();
-                _timer = _spawnInterval;
             }
-               
         }
 
         private void SpawnEnemy()
