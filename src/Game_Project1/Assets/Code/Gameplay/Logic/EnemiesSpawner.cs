@@ -13,14 +13,7 @@ namespace Code.Gameplay.Logic
 
         
         
-        private void Start()
-        {
-            StartCoroutine(SpawnEnemyCoroutine());
-        }
-
-       
-
-        private IEnumerator SpawnEnemyCoroutine()
+        private  IEnumerator Start()
         {
             while (true)
             {
@@ -29,6 +22,7 @@ namespace Code.Gameplay.Logic
             }
         }
 
+        
         private void SpawnEnemy()
         {
             Instantiate(_enemy, gameObject.transform);
