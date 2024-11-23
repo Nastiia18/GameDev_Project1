@@ -8,6 +8,14 @@ namespace Code.Gameplay.Logic
         [SerializeField]
         private float _currentHealth;
 
+        public float CurrentHealth => _currentHealth;
+        public float MaxHealth { get; private set; }
+
+        private void Start()
+        {
+            MaxHealth = _currentHealth;
+        }
+
         public void Substract(float healthToSubtract)
         {
            
