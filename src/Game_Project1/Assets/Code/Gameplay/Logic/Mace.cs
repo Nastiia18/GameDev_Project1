@@ -4,9 +4,12 @@ namespace Code.Gameplay.Logic
 {
     public class Mace : MonoBehaviour, ICollectable
     {
-        public void Collect()
+        [SerializeField] 
+        private float _healthToSubstract =10;
+
+        public void Collect(Collector collector)
         {
-            Debug.Log("Mace collected");
+           collector.GetComponent<Health>().Substract(_healthToSubstract);
         }
     }
 }
