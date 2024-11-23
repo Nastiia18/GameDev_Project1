@@ -1,3 +1,4 @@
+using Code.Runtine.infrastructure.Services.Input;
 using Code.Runtine.infrastructure.Services.Random;
 using Code.Runtine.infrastructure.Services.Scene;
 using UnityEngine.SceneManagement;
@@ -10,6 +11,8 @@ namespace Code.Runtine.infrastructure
         {
             Container.Bind<IRandomServices>().To<RandomServices>().AsSingle();
             Container.Bind<ISceneLoader>().To<SceneLoader>().AsSingle();
+            Container.Bind<IInputService>().To<InputService>().AsSingle();
+
             Container.BindInterfacesAndSelfTo<ProjectInstaller>().FromInstance(this).AsSingle();
         }
 
