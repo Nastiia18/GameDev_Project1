@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace Code.Gameplay.Logic
+namespace Code.Runtine.Gameplay.Logic
 {
     public sealed class Collector: MonoBehaviour
     {

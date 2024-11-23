@@ -1,9 +1,9 @@
 using System;
-using Code.Extensions;
-using Code.Gameplay.Logic;
+using Code.Runtine.Extensions;
+using Code.Runtine.Gameplay.Logic;
 using UnityEngine;
 
-namespace Code.Gameplay.View
+namespace Code.Runtine.Gameplay.View
 {
     internal sealed class MoveView:MonoBehaviour
     {

@@ -1,10 +1,8 @@
-using System;
+using Code.Runtine.Gameplay.Logic;
 using UnityEngine;
 using UnityEngine.UI;
-using Code.Gameplay.Logic;
-using UnityEngine.Serialization;
 
-namespace Code.Gameplay.View.UI
+namespace Code.Runtine.Gameplay.View.UI
 {
     internal sealed class HealthyBar : MonoBehaviour
     {

@@ -1,4 +1,4 @@
-namespace Code.Gameplay.Logic
+namespace Code.Runtine.Gameplay.Logic
 {
     public interface ICollectable
     {

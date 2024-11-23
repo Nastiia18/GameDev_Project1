@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Code.Gameplay.Logic
+namespace Code.Runtine.Gameplay.Logic
 {
     internal sealed class DestroyBelowY: MonoBehaviour
     {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Code.Gameplay.Logic
+namespace Code.Runtine.Gameplay.Logic
 {
     public class Mace : MonoBehaviour, ICollectable
     {
