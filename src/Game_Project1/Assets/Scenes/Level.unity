@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnInterval: 2
-  _enemy: {fileID: 5786767461918049919, guid: 86591e47fff29a94387ddf1c4a740eb2, type: 3}
+  _collectable: {fileID: 5786767461918049919, guid: 86591e47fff29a94387ddf1c4a740eb2, type: 3}
 --- !u!4 &996476421 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3177359494409577928, guid: e696be2eb14f2dd4c9621221be08073d, type: 3}
