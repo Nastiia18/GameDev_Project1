@@ -415,7 +415,7 @@ GameObject:
   m_Layer: 7
   m_Name: CollectableSpawner
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -448,6 +448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnInterval: 2
   _collectable: {fileID: 5786767461918049919, guid: 86591e47fff29a94387ddf1c4a740eb2, type: 3}
+  _randomDeltaX: 9.02
 --- !u!4 &996476421 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3177359494409577928, guid: e696be2eb14f2dd4c9621221be08073d, type: 3}
