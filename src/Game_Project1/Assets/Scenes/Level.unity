@@ -1366,6 +1366,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: {fileID: 1795669307}
+  _rigidbady: {fileID: 1795669299}
+  _collider: {fileID: 1795669300}
+  _forceOnDeath: 10
 --- !u!1001 &1865717977
 PrefabInstance:
   m_ObjectHideFlags: 0
