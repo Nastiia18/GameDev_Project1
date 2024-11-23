@@ -11,7 +11,8 @@ namespace Code.Runtine.Gameplay.Logic
         public float CurrentHealth => _currentHealth;
         public float MaxHealth { get; private set; }
 
-        public event Action HealthChanged;
+        public event Action Changed;
+        public event Action Death;
         private void Start()
         {
             MaxHealth = _currentHealth;
@@ -23,10 +24,14 @@ namespace Code.Runtine.Gameplay.Logic
             if(healthToSubtract <0)
                 throw new InvalidOperationException($"Health to subtract must be positive but was {healthToSubtract}");
             _currentHealth -= healthToSubtract;
-            HealthChanged?.Invoke();
+            Changed?.Invoke();
 
-            if (_currentHealth < 0)
+            if (_currentHealth <= 0)
+            {
                 _currentHealth = 0;
+                Death?.Invoke();
+            }
+              
         }
     }
 }
