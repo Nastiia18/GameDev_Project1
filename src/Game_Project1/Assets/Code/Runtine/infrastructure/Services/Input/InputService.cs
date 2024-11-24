@@ -3,7 +3,7 @@ namespace Code.Runtine.infrastructure.Services.Input
     public class InputService : IInputService
     {
         private const string AxisHorisontal = "Horizontal";
-        private bool _enabled = true;
+        private bool _enabled;
 
         public void Enable() => _enabled = true;
 

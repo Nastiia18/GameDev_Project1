@@ -1,6 +1,9 @@
+using Code.Runtine.infrastructure.GameStates.StateMachine;
+using Code.Runtine.infrastructure.GameStates.StateProvider;
 using Code.Runtine.infrastructure.Services.Input;
 using Code.Runtine.infrastructure.Services.Random;
 using Code.Runtine.infrastructure.Services.Scene;
+using Code.Runtine.infrastructure.GameStates.State;
 using UnityEngine.SceneManagement;
 using Zenject;
 namespace Code.Runtine.infrastructure
@@ -9,18 +12,29 @@ namespace Code.Runtine.infrastructure
     {
         public override void InstallBindings()
         {
-            Container.Bind<IRandomServices>().To<RandomServices>().AsSingle();
-            Container.Bind<ISceneLoader>().To<SceneLoader>().AsSingle();
-            Container.Bind<IInputService>().To<InputService>().AsSingle();
-
+            BindInfrastructureServices();
+            BindGameStates();
             Container.BindInterfacesAndSelfTo<ProjectInstaller>().FromInstance(this).AsSingle();
         }
 
-        public void Initialize()
+        private void BindGameStates()
         {
-           Container
-               .Resolve<ISceneLoader>()
-               .LoadScene("Level");
+            Container.Bind<IStateProvider>().To<StateProvider>().AsSingle();
+            Container.Bind<IGameStateMachine>().To<GameStateMachine>().AsSingle();
+            Container.BindInterfacesAndSelfTo<BootstrapState>().AsSingle();
+            Container.BindInterfacesAndSelfTo<LavelState>().AsSingle();
         }
+
+        private void BindInfrastructureServices()
+        {
+            Container.Bind<IRandomServices>().To<RandomServices>().AsSingle();
+            Container.Bind<ISceneLoader>().To<SceneLoader>().AsSingle();
+            Container.Bind<IInputService>().To<InputService>().AsSingle();
+        }
+
+        public void Initialize() =>
+            Container
+                .Resolve<IGameStateMachine>()
+                .Enter<BootstrapState>();
     }
 }
