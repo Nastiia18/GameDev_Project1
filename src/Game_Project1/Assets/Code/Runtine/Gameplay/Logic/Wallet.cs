@@ -8,6 +8,8 @@ namespace Code.Runtine.Gameplay.Logic
         [SerializeField]
         private int _balance;
 
+        public int Balance => _balance;
+
         public void AddCoint() => _balance ++;
     }
 }
