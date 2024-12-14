@@ -25,8 +25,18 @@ namespace Code.Runtine.infrastructure.GameStates.StateMachine
             state.Enter();
         }
 
+        public void Enter<TState, TPayLoad>(TPayLoad payload)
+            where TState : class, IPlayLoadedEnterableState<TPayLoad>
+        {
+            IPlayLoadedEnterableState<TPayLoad> state = GetState<TState>();
+            if(_activeState is IExitableState activeState) 
+                activeState?.Exit();
+           
+            Debug.Log($"GameStateMachine entered: <color=#7CB9E8>{state.GetType().Name}</color>");
+            state.Enter(payload);
+        }
         private TState GetState<TState>()
-            where TState : class, IEnterableState =>
+            where TState : class,IState=>
              _stateProvider.GetState<TState>();
         
     }

@@ -12,7 +12,7 @@ namespace Code.Runtine.infrastructure.GameStates.StateProvider
             _container = container;
         }
         public TState GetState<TState>()
-            where TState : class, IEnterableState =>
+            where TState : class, IState =>
             _container.Resolve<TState>();
     }
 }

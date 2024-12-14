@@ -6,5 +6,8 @@ namespace Code.Runtine.infrastructure.GameStates.StateMachine
     {
         void Enter<TState>()
             where TState : class, IEnterableState;
+
+        void Enter<TState, TPayLoad>(TPayLoad payload)
+            where TState : class, IPlayLoadedEnterableState<TPayLoad>;
     }
 }

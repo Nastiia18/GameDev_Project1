@@ -1,6 +1,7 @@
 using Code.Runtine.Gameplay.Logic;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace Code.Runtine.Gameplay.View.UI
 {
@@ -9,13 +10,15 @@ namespace Code.Runtine.Gameplay.View.UI
         [SerializeField] 
         private Image _image;
 
-        [SerializeField] 
         private Health _health;
 
-        private void Awake()
+        public void SetUp(Health health)
         {
+            _health = health;
             _health.Changed += OnChanged;
         }
+        
+
         private void OnDestroy()
         {
             _health.Changed -= OnChanged;

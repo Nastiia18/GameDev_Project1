@@ -5,6 +5,6 @@ namespace Code.Runtine.infrastructure.GameStates.StateProvider
     public interface IStateProvider
     {
         TState GetState<TState>() 
-            where TState : class, IEnterableState;
+            where TState : class, IState;
     }
 }
