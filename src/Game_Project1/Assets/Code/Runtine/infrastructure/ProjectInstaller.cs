@@ -26,6 +26,8 @@ namespace Code.Runtine.infrastructure
         {
             Container.Bind<IStateProvider>().To<StateProvider>().AsSingle();
           
+            
+            Container.BindInterfacesAndSelfTo<ManeState>().AsSingle();
             Container.Bind<IGameStateMachine>().To<GameStateMachine>().AsSingle();
             Container.BindInterfacesAndSelfTo<BootstrapState>().AsSingle();
             Container.BindInterfacesAndSelfTo<LoadLevelState>().AsSingle();

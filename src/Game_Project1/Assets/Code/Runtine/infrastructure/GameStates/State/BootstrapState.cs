@@ -30,7 +30,8 @@ namespace Code.Runtine.infrastructure.GameStates.State
             _sceneLoader.LoadScene(BootstrapSceneName);
             _staticDataService.LoadAll();
             _sceneLoader.LoadScene(LevelName);
-            _stateMachine.Enter<LoadLevelState, string>("Level");
+            _stateMachine.Enter<ManeState>();
+            
         }
 
     }
